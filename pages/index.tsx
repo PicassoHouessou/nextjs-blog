@@ -4,8 +4,17 @@ import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
 import { useEffect } from "react";
+import Date from "../components/date";
 
-export default function Home({ allPostsData }) {
+export default function Home({
+    allPostsData,
+}: {
+    allPostsData: {
+        date: string;
+        title: string;
+        id: string;
+    }[];
+}) {
     useEffect(() => {
         console.log(allPostsData);
     });
